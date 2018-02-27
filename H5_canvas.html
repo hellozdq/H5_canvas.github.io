@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<style type="text/css">
+		* {
+			margin: 0;
+			padding: 0;
+		}
+		
+		canvas {
+			background: #90C9D1;
+		}
+	</style>
+
+	<body>
+		<canvas></canvas>
+	</body>
+	<script type="text/javascript">
+		var canvas = document.querySelector("canvas");
+		canvas.width = document.documentElement.clientWidth - 5;
+		canvas.height = document.documentElement.clientHeight - 5;
+
+		var cx = canvas.getContext("2d");
+		//储存数组
+		var dot = [],
+			dot2 = [];
+
+		cx.strokeStyle = "#000000";
+		cx.lineWidth = 1;
+		//圆心
+		for(var i = 0; i < 1000; i++) {
+
+			x = Math.round(Math.random() * canvas.width);
+			y = Math.round(Math.random() * canvas.height);
+			//半径
+			if(canvas.width > canvas.height) {
+				R = canvas.height * 0.1;
+			}
+			if(canvas.width < canvas.height) {
+				R = canvas.width * 0.1;
+			}
+			//不超出边界
+			if(x - R <= 0) {
+				x = x + R;
+			}
+			if(x + R >= canvas.width) {
+				x = x - R;
+			}
+			if(y - R <= 0) {
+				y = y + R;
+			}
+			if(y + R >= canvas.height) {
+				y = y - R;
+			}
+
+			//增加
+			var x0 = Math.random(),
+				y0 = Math.random();
+
+			//判断开始方向
+			var T_F = Math.round(Math.random() * 3);
+
+			var speed = 2, //速度
+				r = Math.sqrt(Math.pow(x0, 2) + Math.pow(y0, 2)), //兩點距離
+				/*统一移动比例*/
+				double = speed / r;
+			x0 = double * x0;
+			y0 = double * y0;
+
+			if(T_F == 0) {
+				x0 = x0;
+				y0 = y0;
+			} else if(T_F == 1) {
+				x0 = -x0;
+				y0 = y0;
+			} else if(T_F == 2) {
+				x0 = x0;
+				y0 = -y0;
+			} else {
+				x0 = -x0;
+				y0 = -y0;
+			}
+			dot.push({ x: x, y: y, x0: x0, y0: y0 });
+			//判断
+			if(i > 0) {
+
+				for(var k = 1; k <= i; k++) {
+					var length = Math.sqrt(Math.pow(dot[i - k].x - dot[i].x, 2) + Math.pow(dot[i - k].y - dot[i].y, 2));
+					if(length <= 2 * R) {
+						var length2 = length;
+					}
+				}
+				console.log(length2);
+				if(length2) {
+
+					continue;
+				} else {
+					dot2.push({ x: x, y: y, x0: x0, y0: y0 ,color:color()});
+				}
+			} else {
+				dot2.push({ x: x, y: y, x0: x0, y0: y0 ,color:color()});
+			}
+			console.log("dot.length++++++" + dot.length);
+			if(dot2.length == 3) {
+				break;
+			}
+		}
+		console.log("dot2.length++++++" + dot2.length);
+
+		setInterval(function() {
+			//清除
+			cx.clearRect(0, 0, canvas.width, canvas.height);
+			for(var i = 0; i < dot2.length; i++) {
+				if(dot2[i].x - R < 0 || dot2[i].x + R > canvas.width) {
+					dot2[i].x0 = -dot2[i].x0;
+				} else if(dot2[i].y - R < 0 || dot2[i].y + R > canvas.height) {
+					dot2[i].y0 = -dot2[i].y0;
+				}
+
+				dot2[i].x += dot2[i].x0;
+				dot2[i].y += dot2[i].y0;
+
+				if(i > 0) {
+					for(var j = 1; j <= i; j++) {
+						var T = Math.sqrt(Math.pow(dot2[i].x - dot2[i - j].x, 2) + Math.pow(dot2[i].y - dot2[i - j].y, 2));
+						if(T < 2 * R) { /*如果两个球的相撞则反向移动*/
+							dot2[i].x0 = -dot2[i].x0;
+							dot2[i].y0 = -dot2[i].y0;
+							dot2[i - j].x0 = -dot2[i - j].x0;
+							dot2[i - j].y0 = -dot2[i - j].y0;
+						}
+					}
+
+				}
+
+				cx.beginPath();
+				cx.fillStyle = dot2[1].color;
+				cx.arc(dot2[i].x, dot2[i].y, R, 0, Math.PI * 2);
+				cx.stroke();
+				cx.fill();
+			}
+
+		}, 10);
+		
+		//选取随机颜色
+		function color() {
+			//将ffffff转成10进制数，再去随机数，向下取整，转成16进制
+			return '#' + Math.floor(Math.random() * 16777215).toString(16);
+		}
+	</script>
+
+</html>
