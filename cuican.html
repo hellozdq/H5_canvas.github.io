@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			body{
+				background: #000000;
+			}
+			.shooting_star{
+				position: absolute;
+				right: 0px;
+				width: 100px;
+				height: 100px;
+				animation: run 2s ease-in infinite;
+			}
+			.S_star1,.S_star2,.S_star3,.S_star4,.S_star5{
+				position: absolute;
+				background:linear-gradient(to right,white,rgba(85,166,255,1) 10% ,rgba(205,199,199,0) 80%);
+				transform: rotate(-30deg);
+				animation: size 2s ease-in infinite;
+				
+			}
+			.S_star1{
+				width: 20px;
+				height: 1px;
+				top: 0px;
+				right: 0px;
+			}
+			
+			.S_star2{
+				width: 20px;
+				height: 1px;
+				top: -125px;
+				right: 158px;
+			}
+			
+			.S_star3{
+				width: 20px;
+				height: 1px;
+				top: -50px;
+				right: 120px;
+			}
+			
+			.S_star4{
+				width: 20px;
+				height: 1px;
+				top: 110px;
+				right: 90px;
+			}
+			
+			.S_star5{
+				width: 20px;
+				height: 1px;
+				top: 53px;
+				right: 150px;
+			}
+			
+			
+			
+			#content{
+				position: relative;
+				width: 1000px;
+				height: 600px;
+			}
+			
+			.star{
+				position: absolute;
+				/*top: 100px;
+				left: 100px;*/
+				/*animation: hide 1.5s infinite alternate;*/				
+			}
+			
+			.shadow{
+				position: absolute;
+				top: -2px;
+				left: 2px;
+				opacity: 0.3;
+				border-radius: 100%;
+				border: none;
+				width: 6px;
+				height: 6px;
+				background: #FFFFFF;
+			}
+			.ellipse1,.ellipse2{
+				position: absolute;
+				width: 10px;
+				height: 2px;
+				border-radius: 50% 100% 100% 50%;
+				background: radial-gradient(white, rgba(255,255,255,0));;
+			}
+			.ellipse2{
+				transform: rotate(90deg);
+			}
+			
+			@keyframes run
+			{
+				from{right:0px; top: 0px;}
+				to{right:870px;top:500px;}
+			}
+			@keyframes size
+			{
+				from{width: 20px;height: 1px;}
+				to{width: 50px;height: 2.5px;}
+			}
+			@keyframes hide
+			{
+				from{opacity: 1;}
+				to{opacity: 0;}
+			}
+			
+			#mon{
+				width: 100px;
+				height: 100px;
+				background: yellow;
+				border-radius: 100%;
+				position: absolute;
+				top: 50px;
+				left: 100px;
+				box-shadow: 0px 0px 30px lightyellow;
+			}
+		</style>
+	</head>
+	<body>
+		<!--流星-->
+		<div class="shooting_star">
+			<div class="S_star1"></div>
+			<div class="S_star2"></div>
+			<div class="S_star3"></div>
+			<div class="S_star4"></div>
+			<div class="S_star5"></div>
+		</div>
+		<!--星星-->
+		<div id="content">
+		<!--<div style="top:200px; left:300px" class="star">
+			<div class="shadow"></div>
+			<div class="ellipse1"></div>
+			<div class="ellipse2"></div>
+		</div>-->
+		</div>
+		<!--月亮-->
+		<div id="mon"></div>
+	</body>
+	<script type="text/javascript">
+		
+		var top1,left1,text,All_text,time;
+		for(var i=0;i<50;i++){
+					
+		top1=Math.round(Math.random()*300);
+		left1=Math.round(Math.random()*1200);
+		time=Math.round(Math.random()*10)/10+1;
+		text="<div style='top:"+top1+"px; "+"left:"+left1+"px;"+"animation: hide "+time+"s"+" infinite alternate;"+"'"+
+		    "class='star'>"+
+			"<div class='shadow'></div>"+
+			"<div class='ellipse1'></div>"+
+			"<div class='ellipse2'></div>"+
+		"</div>";
+		All_text+=text;
+		}
+		document.getElementById("content").innerHTML=All_text;
+		
+	</script>
+</html>
