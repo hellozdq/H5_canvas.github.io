@@ -1,0 +1,463 @@
+@charset "UTF-8";
+/*banner*/
+#banner {
+  width: 100%;
+  min-height: 425px;
+  margin: 0 auto;
+  position: relative;
+  overflow: hidden;
+}
+
+#banner ul {
+  width: 100%;
+  min-height: 425px;
+}
+
+#banner ul li {
+  position: absolute;
+  width: 100%;
+  top: 0;
+  left: 0;
+  min-height: 425px;
+}
+
+#banner ul li img {
+  width: 100%;
+  min-height: 425px;
+}
+
+#banner ol {
+  width: 120px;
+  height: 30px;
+  position: absolute;
+  left: 500px;
+  bottom: 50px;
+  z-index: 100;
+}
+
+#banner ol li {
+  list-style-type: none;
+  width: 16px;
+  height: 16px;
+  float: left;
+  background: #fff;
+  border-radius: 50%;
+  margin-left: 10px;
+}
+
+#banner ol .active_ol {
+  background: #259864;
+}
+
+/*公司介绍和新闻*/
+#contain {
+  width: 1200px;
+  margin: 150px auto 0;
+}
+
+#contain #introduce .content_left {
+  float: left;
+  width: 415px;
+}
+
+#contain #introduce .content_left .title {
+  font-size: 36px;
+  color: #3A3B3A;
+}
+
+#contain #introduce .content_left .line {
+  width: 140px;
+  height: 0;
+  border-top: 1px solid #7d7b7b;
+  margin-left: 3px;
+  margin-top: 5px;
+  margin-bottom: 45px;
+}
+
+#contain #introduce .content_left .text {
+  text-indent: 2em;
+  width: 370px;
+  font-size: 12px;
+  color: #3a3b3a;
+}
+
+#contain #introduce .content_left .more {
+  width: 50px;
+  height: 25px;
+  margin-top: 50px;
+  margin-left: 320px;
+  background: #259864;
+  font-size: 12px;
+  color: #fff;
+  text-decoration: none;
+  text-align: center;
+  display: inline-grid;
+  align-items: center;
+}
+
+#contain #introduce .content_right {
+  float: left;
+  width: 785px;
+}
+
+#contain .new {
+  margin-bottom: 30px;
+}
+
+#contain .new .title2 {
+  font-size: 36px;
+  color: #3A3B3A;
+  margin-top: 145px;
+}
+
+#contain .new .line2 {
+  width: 140px;
+  height: 0;
+  border-top: 1px solid #7d7b7b;
+  margin-left: 3px;
+  margin-top: 5px;
+  margin-bottom: 45px;
+  margin-bottom: 65px;
+}
+
+#contain .new .content {
+  margin-bottom: 35px;
+}
+
+#contain .new .content .new_left {
+  float: left;
+}
+
+#contain .new .content .new_right {
+  float: right;
+  width: 770px;
+  height: 265px;
+  background: #e7e6e6;
+  position: relative;
+}
+
+#contain .new .content .new_right .main {
+  margin-left: 35px;
+  margin-top: 25px;
+  width: 560px;
+}
+
+#contain .new .content .new_right .main .main_title {
+  display: inline-block;
+  line-height: 25px;
+  font-size: 16px;
+  color: #212020;
+  border-bottom: solid 1px #212020;
+  margin-bottom: 20px;
+}
+
+#contain .new .content .new_right .main .active_color {
+  color: #339966;
+  border-bottom: solid 1px #339966;
+}
+
+#contain .new .content .new_right .main .text {
+  color: #666666;
+  font-size: 12px;
+}
+
+#contain .new .content .new_right .time {
+  float: right;
+  text-align: right;
+  position: absolute;
+  top: 73px;
+  right: 35px;
+}
+
+#contain .new .content .new_right .time .m-d {
+  color: #333333;
+  font-size: 24px;
+}
+
+#contain .new .content .new_right .time .year {
+  color: #666666;
+  font-size: 12px;
+}
+
+#contain .new .more {
+  width: 50px;
+  height: 25px;
+  margin-top: 50px;
+  margin-left: 320px;
+  background: #259864;
+  font-size: 12px;
+  color: #fff;
+  text-decoration: none;
+  text-align: center;
+  display: inline-grid;
+  align-items: center;
+  margin-top: 0;
+  margin-left: 1150px;
+}
+
+/*中部*/
+#middle {
+  width: 100%;
+  margin-bottom: 112px;
+}
+
+#middle img {
+  width: 100%;
+}
+
+/*产品展示*/
+#product {
+  width: 1200px;
+  margin: 0 auto 145px;
+}
+
+#product .title2 {
+  font-size: 36px;
+  color: #3A3B3A;
+}
+
+#product .line2 {
+  width: 140px;
+  height: 0;
+  border-top: 1px solid #7d7b7b;
+  margin-left: 3px;
+  margin-top: 5px;
+  margin-bottom: 45px;
+}
+
+#product .content {
+  margin-top: 40px;
+}
+
+#product .content .main {
+  margin-top: 25px;
+  float: left;
+}
+
+#product .content .main .img {
+  float: left;
+}
+
+#product .content .main .main_text {
+  background: #e3e2e2;
+  padding-top: 35px;
+  padding-left: 25px;
+  float: left;
+  width: 260px;
+  height: 160px;
+}
+
+#product .content .main .main_text .title {
+  display: inline-block;
+  line-height: 25px;
+  font-size: 16px;
+  color: #212020;
+  border-bottom: solid 1px #212020;
+  margin-bottom: 20px;
+}
+
+#product .content .main .main_text .active_color {
+  color: #339966;
+  border-bottom: solid 1px #339966;
+}
+
+#product .content .main .main_text .text {
+  color: #232120;
+  font-size: 12px;
+}
+
+#product .content .white {
+  width: 30px;
+  height: 10px;
+  float: left;
+}
+
+#product .more {
+  width: 50px;
+  height: 25px;
+  margin-top: 50px;
+  margin-left: 320px;
+  background: #259864;
+  font-size: 12px;
+  color: #fff;
+  text-decoration: none;
+  text-align: center;
+  display: inline-grid;
+  align-items: center;
+  margin-top: 65px;
+  margin-left: 1150px;
+}
+
+/*联系*/
+#contact {
+  width: 1200px;
+  margin: 0 auto;
+}
+
+#contact .title2 {
+  font-size: 36px;
+  color: #3A3B3A;
+}
+
+#contact .line2 {
+  width: 140px;
+  height: 0;
+  border-top: 1px solid #7d7b7b;
+  margin-left: 3px;
+  margin-top: 5px;
+  margin-bottom: 45px;
+}
+
+#contact .content .input {
+  margin-bottom: 150px;
+}
+
+#contact .content .input .content_left {
+  float: left;
+}
+
+#contact .content .input .content_left .address,
+#contact .content .input .content_left .e-mail,
+#contact .content .input .content_left .name,
+#contact .content .input .content_left .tel {
+  position: relative;
+  width: 565px;
+  height: 50px;
+  margin-top: 29px;
+  border: solid 1px #666666;
+}
+
+#contact .content .input .content_left .address span,
+#contact .content .input .content_left .e-mail span,
+#contact .content .input .content_left .name span,
+#contact .content .input .content_left .tel span {
+  position: absolute;
+  color: #3a3b3a;
+  font-size: 16px;
+  top: 12px;
+}
+
+#contact .content .input .content_left .address input,
+#contact .content .input .content_left .e-mail input,
+#contact .content .input .content_left .name input,
+#contact .content .input .content_left .tel input {
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 48px;
+  width: 480px;
+  border: none;
+  outline: none;
+  font-size: 16px;
+}
+
+#contact .content .input .content_right {
+  width: 600px;
+  height: 295px;
+  float: left;
+  margin-left: 29px;
+  margin-top: 29px;
+  position: relative;
+}
+
+#contact .content .input .content_right .message {
+  width: 600px;
+  height: 206px;
+  position: absolute;
+  border: solid 1px #666666;
+}
+
+#contact .content .input .content_right .message .say {
+  position: absolute;
+  top: 10px;
+}
+
+#contact .content .input .content_right .message textarea {
+  border: none;
+  outline: none;
+  position: absolute;
+  right: 0;
+  top: 12px;
+  width: 510px;
+  height: 194px;
+  font-size: 16px;
+}
+
+#contact .content .input .content_right .code {
+  position: absolute;
+  text-align: center;
+  border: solid 1px #666666;
+  outline: none;
+  width: 125px;
+  height: 50px;
+  margin-top: 10px;
+  bottom: 0;
+}
+
+#contact .content .input .content_right .code_two {
+  position: absolute;
+  display: inline-block;
+  border: solid 1px #666666;
+  margin-top: 20px;
+  margin-left: 10px;
+  left: 160px;
+  bottom: 0;
+}
+
+#contact .content .input .content_right .submit {
+  position: absolute;
+  width: 100px;
+  height: 50px;
+  outline: none;
+  border: none;
+  background: #259864;
+  color: #FFFFFF;
+  bottom: 0;
+  right: 0;
+}
+
+#contact .content .data {
+  margin-bottom: 140px;
+}
+
+#contact .content .data .data_left {
+  float: left;
+}
+
+#contact .content .data .data_left .company {
+  color: #339966;
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+
+#contact .content .data .data_left .data_content .data_content1 {
+  float: left;
+  margin-right: 250px;
+}
+
+#contact .content .data .data_left .data_content .data_content1 li {
+  margin-top: 45px;
+  list-style-type: none;
+  color: #666666;
+  font-size: 12px;
+}
+
+#contact .content .data .data_left .data_content .data_content2 {
+  float: left;
+}
+
+#contact .content .data .data_left .data_content .data_content2 li {
+  margin-top: 45px;
+  list-style-type: none;
+  color: #666666;
+  font-size: 12px;
+}
+
+#contact .content .data .two_code {
+  float: right;
+}
+
+/*地图*/
+#map {
+  width: 100%;
+}

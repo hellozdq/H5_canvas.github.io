@@ -1,0 +1,118 @@
+@charset "UTF-8";
+/*banner*/
+#banner {
+  position: relative;
+  width: 100%;
+  height: 300px;
+}
+
+#banner img {
+  width: 100%;
+  height: 300px;
+}
+
+#banner .about_us {
+  position: absolute;
+  top: 10%;
+  right: 20%;
+  width: 295px;
+  height: 80px;
+  font-size: 40px;
+  color: #fff;
+  text-align: center;
+  padding-top: 30px;
+  background: #339966;
+  opacity: 0.9;
+}
+
+/*内容*/
+#contain {
+  width: 1200px;
+  margin: 150px auto;
+}
+
+#contain .contain_l {
+  float: left;
+}
+
+#contain .contain_l ul li {
+  width: 150px;
+  height: 30px;
+  padding: 15px 25px;
+  font-size: 18px;
+  list-style-type: none;
+  margin-bottom: 7px;
+  border: solid 1px #999999;
+}
+
+#contain .contain_l ul li a {
+  font-size: 18px;
+  color: #161b1b;
+  text-decoration: none;
+}
+
+#contain .contain_l ul li span {
+  display: inline-block;
+  width: 13px;
+  height: 13px;
+  border-top: solid 4px #FFFFFF;
+  border-right: solid 4px #FFFFFF;
+  transform: rotate(45deg);
+  margin-left: 50px;
+  margin-top: 3px;
+}
+
+#contain .contain_l ul .li_bg, #contain .contain_l ul li:hover {
+  background: #339966;
+  border: none;
+}
+
+#contain .contain_r {
+  float: right;
+}
+
+#contain .contain_r .introduce {
+  border: solid 1px #999999;
+  width: 815px;
+  height: 790px;
+  padding: 25px 70px;
+}
+
+#contain .contain_r .introduce .head {
+  padding-bottom: 10px;
+  border-bottom: solid 1px #999999;
+}
+
+#contain .contain_r .introduce .head .title {
+  float: left;
+  font-size: 16px;
+  color: #161b1b;
+}
+
+#contain .contain_r .introduce .head .head_to {
+  float: right;
+}
+
+#contain .contain_r .introduce .head .head_to a {
+  color: #161b1b;
+  font-size: 12px;
+  text-decoration: none;
+}
+
+#contain .contain_r .introduce .head .head_to .now {
+  color: #339966;
+}
+
+#contain .contain_r .introduce .text p {
+  color: #3c3a3a;
+  font-size: 12px;
+  margin-top: 45px;
+  text-indent: 2em;
+}
+
+#contain .contain_r .introduce:nth-child(2),
+#contain .contain_r .introduce:nth-child(3),
+#contain .contain_r .introduce:nth-child(4),
+#contain .contain_r .introduce:nth-child(5) {
+  display: none;
+}
