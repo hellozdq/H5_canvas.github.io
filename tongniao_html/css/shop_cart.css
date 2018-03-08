@@ -1,0 +1,225 @@
+.contain{
+	width: 1200px;
+	margin: auto;
+}
+.contain_head{
+	margin-top: 45px;
+	margin-bottom: 45px;
+	margin-left: 120px;
+	height: 88px;
+}
+.shape_1,.shape_2,.shape_3{
+	position: relative;
+	width: 320px;
+	text-align: center;
+	float: left;
+}
+.rectangle_1,.rectangle_2,.rectangle_3{
+	width: 320px;
+	height: 8px;
+	background: #dea15f;
+	margin-top: 26px;
+	float: left;
+}
+.rectangle_2,.rectangle_3{
+	background: #CECECE;
+}
+.round_1,.round_2,.round_3{
+	width: 60px;
+	height: 60px;
+	border-radius: 50%;
+	background: #DEA15F;
+	position: absolute;
+	left: 130px;
+	/*top: -5px;*/
+	text-align: center;
+	line-height: 60px;
+}
+.round_2,.round_3{
+    background: #CECECE;
+}
+.round_1 a,.round_2 a,.round_3 a{
+	font-size: 36px;
+	color: #ebe8e8;
+}
+.text_1,.text_2,.text_3{
+	padding-top: 62px;
+}
+.text_1 a,.text_2 a,.text_3 a{
+	font-size: 20px;
+	color: #171717;
+}
+.table_top{
+	height: 23px;
+	border-bottom: solid 1px #CECECE;
+}
+.table_top ul{
+	list-style-type: none;
+	margin-left: 30px;
+}
+.table_top ul li{
+	float: left;
+	font-size: 16px;
+    color: #171717;
+}
+#h2{
+	margin-left: 155px;
+	margin-right: 275px;
+}
+#h4{
+	margin-left: 133px;
+	margin-right: 131px;
+}
+#h6{
+	margin-left: 133px;
+}
+/*checkbox*/
+#h1 span,
+.b1 span,
+.c1 span{
+	margin-right:3px ;
+	float: left;
+	position: relative;
+}
+#h1 .input_check,
+.b1 .input_check1,
+.c1 .input_check2{
+	position: absolute;
+	/*visibility: hidden;*/
+	display: none;
+}
+#h1 .input_check+label,
+.b1 .input_check1+label,
+.c1 .input_check2+label{
+	display: block;
+	width: 15px;
+	height: 15px;
+	border: solid 1px #CECECE;
+}
+#h1 .input_check:checked+label:after,
+.b1 .input_check1:checked+label:after,
+.c1 .input_check2:checked+label:after{
+	content: "";
+	width: 11px;
+	height: 11px;
+	margin-left: 2px;
+	margin-top: 2px;
+	background: #DEA15F;
+	position: absolute;
+	
+}
+.table_bottom .d_1,.d_2{
+	margin-top: 20px;
+	
+	height: 158px;
+	padding-left: 30px;
+	list-style-type: none;
+	border: solid 1px #CECECE;
+	/*display: table-cell;
+	vertical-align: middle;*/
+}
+.table_bottom ul li{
+	float: left;
+}
+.b1,.c1{
+	margin-top:52px ;
+	margin-right: 6px;
+}
+.b2,.c2{
+	margin-top: 19px;
+}
+.b3,.c3{
+	width: 288px;
+	margin-top: 30px;
+	margin-left: 30px;
+	margin-right: 75px;
+	line-height: 32px;
+}
+.b4,.c4{
+	width: 139px;
+	width: 58px;
+	height: 120px;
+	line-height: 120px;
+}
+.b5,.c5{
+	font-size: 0px;
+	margin-top: 45px;
+	margin-left: 70px;
+	margin-right: 68px;
+}
+.b5 #min_1,.b5 #add_1,.b5 #num_1,
+.c5 #min_2,.c5 #add_2,.c5 #num_2{
+	background: #FFFFFF;
+	border: solid 1px #535353;
+	width: 38px;
+	height: 28px;
+	font-size: 16px;
+	color: #171717;
+	text-align: center;
+	vertical-align: middle;
+}
+.b5 #num_1,
+.c5 #num_2{
+	outline: none;
+}
+.b5 #num_1,.c5 #num_2{
+	width: 60px;
+	border-left: none;
+	border-right: none;
+	height: 26px;
+	
+}
+.b6,.c6{
+	height: 120px;
+	line-height: 120px;
+	color: #dea15f;
+}
+.b7,.c7{
+	height: 120px;
+	line-height: 120px;
+	margin-left: 125px;
+}
+.b7 a,.c7 a{
+	text-decoration: none;
+	color: #171717;
+}
+#checkbox{
+    width:30px ;
+    outline: none;
+	border: 1px solid #000000;
+	background: #FFFFFF;
+	cursor: pointer;
+}
+.accounts{
+	float: right;
+	height: 130px;
+	margin-bottom: 20px;
+}
+.accounts p{
+	font-size: 16px;
+	color: #171717;
+}
+.accounts .t1{
+	text-align: right;
+	margin-top: 19px;
+	margin-bottom: 6px;
+}
+.accounts .t2{
+	text-align: right;
+	margin-bottom: 19px;
+}
+#calc_num{
+	color: #dd9d58;
+}
+#calc_price{
+	color: #DEA15F;
+}
+#settle_accounts{
+	outline: none;
+	width: 218px;
+	height: 48px;
+	background: #f98319;
+	border: 1px solid #F98319;
+	font-size: 26px;
+	color: #EBE8E8;
+}
