@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			.round{
+				width: 100px;
+				height: 100px;
+				border-radius: 100%;
+				box-shadow: 0,0,50px #000000;
+				animation: go 3s linear infinite;
+			}
+			
+			@keyframes go{
+				from{transform: rotate(0deg);}
+				to{transform: rotate(360deg);}
+			}
+			.clearfix:after{
+                 display: block;
+                 height: 0;
+                 content: "";
+                 clear: both;
+ }
+			.bg{
+				padding: 100px;
+				
+				background: #999999;
+			}
+			.big_round{
+				float: left;
+				background: #000000;
+				width: 50px;
+				height: 100px;
+				border-radius: 50px 0 0 50px;
+				
+			}
+			
+			.big_round2{
+				float: left;
+				background: #fff;
+				width: 50px;
+				height: 100px;
+				border-radius:0 50px 50px 0;
+			}
+			
+			.round_med1{
+				position: relative;
+				top: 50px;
+				left: 25px;
+				width: 50px;
+				height: 50px;
+				border-radius:100%;
+				background: #fff;
+			}
+			
+			.round_med2{
+				position: relative;
+				left: -25px;
+				width: 50px;
+				height: 50px;
+				border-radius:100%;
+				background: #000;
+			}
+			
+			.small_round{
+				position: absolute;
+				width: 20px;
+				height: 20px;
+				background: #000;
+				border-radius: 100%;
+				top: 15px;
+				left: 15px;
+			}		
+			
+			.small_round2{
+				position: absolute;
+				width: 20px;
+				height: 20px;
+				background: #fff;
+				border-radius: 100%;
+				top: 15px;
+				left: 10px;
+			}																
+			
+		</style>
+	</head>
+	<body>
+		<div class="bg ">
+			<div class="round clearfix">
+			<div class="big_round">
+				<div class="round_med1">
+					<div class="small_round"></div>
+				</div>
+			</div>	
+			
+			<div class="big_round2">
+				<div class="round_med2">
+					<div class="small_round2"></div>
+				</div>
+			</div>
+			</div>
+		</div>
+	</body>
+</html>

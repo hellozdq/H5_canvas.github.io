@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+
+	<body>
+		<canvas id="" width="500" height="500"></canvas>
+	</body>
+	<script type="text/javascript">
+		var can = document.querySelector("canvas");
+		var cx = can.getContext("2d");
+		var i = 0;
+		cx.lineWidth = 1;
+
+		//一点一点画圆
+		function round() {
+			cx.beginPath();
+			i++;
+			cx.arc(250, 250, 100, (-18+i - 0.9) * Math.PI / 180, (-18+i) * Math.PI / 180);
+			if(i >= 360) {
+				clearInterval(round_I);
+			}
+			cx.stroke();
+		}
+
+		var round_I = setInterval(round, 5);
+
+		
+
+		//画星2
+		var j = 0;
+
+		setTimeout(function() {
+
+			var star2_I=setInterval(function() {
+				var R = 100;
+				var r = R / 2.6;
+				var x = 250;
+				var y = 250;
+				cx.beginPath();
+				cx.lineWidth = 1;
+				cx.moveTo(x + Math.cos((18+144 * j) * Math.PI / 180) * R, y - Math.sin((18+144 * j) * Math.PI / 180) * R);
+				cx.lineTo(x + Math.cos((18+144 * (j + 1)) * Math.PI / 180) * R, y - Math.sin((18+144 * (j + 1)) * Math.PI / 180) * R);
+				if(j <= 4) {
+					j++;
+				}
+                console.log(j);
+				cx.stroke();
+				
+				if(j>4){
+				clearInterval(star2_I);
+			}
+			}, 200);
+			
+			
+		}, 1800);
+	</script>
+
+</html>

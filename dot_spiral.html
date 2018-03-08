@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<canvas id="" width="500" height="500"></canvas>
+	</body>
+	<script type="text/javascript">
+		var can=document.querySelector("canvas");
+		var cx=can.getContext("2d");
+		cx.lineWidth=0.1;
+		cx.beginPath();
+		var i=1;
+		function run(){
+			i=i+1;
+//			console.log(i);
+			
+			cx.arc(200,200,10+i*0.1,(i-0.9)*Math.PI/180,i*Math.PI/180);
+			if(i>=1000){
+				clearInterval(timer);
+				
+			}
+			cx.stroke();
+		}
+		var timer=setInterval(run,10);
+			
+		
+		
+		
+	</script>
+</html>

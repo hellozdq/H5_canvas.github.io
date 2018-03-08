@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<style type="text/css">
+			div {
+				width: 500px;
+				height: 500px;
+				margin: 20px auto;
+				background: gainsboro;
+			}
+		</style>
+	</head>
+
+	<body>
+		<div>
+			<canvas id="canvas" width="500" height="500"></canvas>
+		</div>
+	</body>
+	<script type="text/javascript">
+		var can = document.getElementById("canvas");
+		var ctx = can.getContext("2d");
+
+		var k = 0;
+
+		function timer() {
+			k++;
+
+			//console.log(k);
+
+			var now = new Date();
+			//console.log(now);
+			//秒
+			var s = now.getSeconds();
+			//			console.log(s);
+
+			
+			ctx.lineWidth = 2;
+			ctx.strokeStyle = "#1E90FF";
+			ctx.save();
+			ctx.beginPath();
+			//旋转中心点坐标
+			ctx.translate(250, 250);
+			ctx.rotate(s * 6 * Math.PI / 180);
+			ctx.moveTo(0, 10 + k);
+			ctx.lineTo(0, 15 + k);
+			ctx.stroke();
+			ctx.restore();
+
+		}
+
+		timer();
+		setInterval(timer, 1000);
+	</script>
+
+</html>
